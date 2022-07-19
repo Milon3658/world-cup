@@ -51,7 +51,7 @@ a {
 .main-bannar-left h1 {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 70px;
+    font-size: 4.375em;
     font-weight: 700px;
     color: white;
 }
@@ -188,6 +188,7 @@ footer {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 0;
     height: 444px;
     background-color: #161616;
     display: flex;
@@ -237,4 +238,83 @@ hr {
     align-items: center;
     border: 1px solid #E8E8E8;
     border-radius: 10px;
+}
+
+/* ******************* */
+/* RESPONSIVE FOR MOBILE*/
+/* ******************* */
+
+
+@media screen and (max-width:688px) {
+    main{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .main-bannar{
+        border-radius: 10px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-bannar-left {
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-bannar-left h1 {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .main-bannar-left p {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .main-bannar-right{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    /*  */
+    /* bannar end */
+    /*  */
+    .left-box{
+        margin-right: 0px;
+        background-color: white;
+    }
+    .empty-color{
+        border: 1px solid #E8E8E8;
+    }
+    .fill-color{
+     width: 160px;
+    }
+    .ress-size{
+        width: 160px;
+    }
+    .match-blogs {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-box-blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* footer */
+    .about{
+        /* margin-bottom: 20px; */
+        flex-direction: column;
+        align-items: center;
+    }
 }
