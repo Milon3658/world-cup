@@ -235,5 +235,6 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: ;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
 }
