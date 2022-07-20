@@ -29,7 +29,7 @@ a {
 /* main-bannar  */
 .main-bannar {
     margin-bottom: 100px;
-    width: 100%;
+    width: 1300px;
     display: flex;
     height: 640px;
     flex-direction: row;
@@ -37,6 +37,7 @@ a {
     align-items: center;
     background-color: rgba(22, 22, 22, 1);
     border-radius: 30px;
+    /* position: static; */
 }
 
 .main-bannar-left {
@@ -65,6 +66,7 @@ a {
 
 .watch-button {
     margin-top: 10px;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,8 +75,14 @@ a {
     width: 180px;
     background-color: rgba(221, 0, 0, 1);
     border-radius: 5px;
+    transition: .5s transform;
 }
-
+.watch-button:hover{
+    transform: scale(1.1);
+}
+/* .watch-button:hover i{
+    transform: rotate(45deg);
+} */
 .fa-chevron-right {
     margin-left: 20px;
 }
@@ -122,6 +130,7 @@ a {
 
 .match-blogs {
     margin-bottom: 100px;
+    width: 1300px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -200,8 +209,6 @@ footer {
 }
 
 hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
     width: 70%;
     height: 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -245,6 +252,37 @@ hr {
     border: 1px solid #E8E8E8;
     border-radius: 10px;
 }
+.icons{
+    margin-top: 20px;
+    
+}
+.fa-facebook{
+    color: white;
+    font-size: 30px;
+    margin-right: 20px;
+    transition: 0.5s transform;
+}
+.fa-facebook:hover{
+    transform: scale(1.3);
+}
+.fa-instagram-square{
+    color: white;
+    font-size: 30px;
+    margin-right: 20px;
+    transition: 0.5s transform;
+}
+.fa-instagram-square:hover{
+    transform: scale(1.3);
+}
+.fa-chrome{
+    color: white;
+    font-size: 30px;
+    margin-right: 20px;
+    transition: 0.5s transform;
+}
+.fa-chrome:hover{
+    transform: scale(1.3);
+}
 
 /* ******************* */
 /* RESPONSIVE FOR MOBILE*/
@@ -252,16 +290,22 @@ hr {
 
 
 @media screen and (max-width:688px) {
+    .icons{
+        display: flex;
+        flex-direction: row;
+    }
     main {
         margin-left: 0;
         margin-right: 0;
     }
 
     .main-bannar {
+        margin-bottom: 0px;
         border-radius: 10px;
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        width: 334px;
+        height: 472px;
+        margin-left: 20px;
+        margin-right: 20px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -269,30 +313,41 @@ hr {
 
     .main-bannar-left {
         align-items: center;
-        width: 100%;
+        width: 258px;
+        height: 178px;
+    }
+
+
+    .watch-button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 161px;
+        height: 40px;
+        margin-bottom: 10px;
     }
 
     .main-bannar-left h1 {
-        margin-left: 5px;
-        margin-right: 5px;
-        font-size: 2em;
-        text-align: center;
-    }
-
-    .main-bannar-left p {
+        padding-top: 20px;
         margin-left: 10px;
         margin-right: 10px;
-        margin-bottom: 10px;
-        font-size: 1em;
+        font-size: 22px;
+        text-align: center;
+    }
+    .main-bannar-left p {
+        width: 258px;
+        height: 48px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        font-size: 14px;
     }
 
     .main-bannar-right {
-        width: 80%;
+        background-size: cover;
+        height: 240px;
         margin-left: 10%;
         margin-right: 10%;
+        /* display: none; */
     }
 
     /*  */
@@ -327,9 +382,12 @@ hr {
 
     /* footer */
     .about {
-        /* margin-bottom: 20px; */
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
+    }
+    .about p{
+        margin-bottom: 0;
     }
 }
 
@@ -350,7 +408,7 @@ hr {
         margin-bottom: 20px;
         border-radius: 30px;
         height: 400px;
-        width: 90%;
+        width: 734px;
         margin-left: 5%;
         margin-right: 5%;
         flex-direction: row;
@@ -376,7 +434,7 @@ hr {
     .left-box {
         margin-bottom: 20px;
         margin-right: 0;
-        width: 100%;
+        width: 734px;
         height: 80px;
         display: flex;
         align-items: center;
@@ -392,20 +450,22 @@ hr {
         border: 1px solid #E8E8E8;
         border-radius: 10px;
     }
-    .fill-color{
+
+    .fill-color {
         margin-bottom: 10px;
-    } 
+    }
 
     .match-blogs {
         flex-direction: column;
         justify-content: space-betweenz;
         align-items: center;
-        width: 90%;
+        width: 734px;
         margin-bottom: 50px;
     }
 
     .right-box-blogs {
         grid-template-columns: repeat(2, 1fr);
+        width: 734px;
     }
 
     /* footer */
@@ -413,7 +473,9 @@ hr {
         width: 100%;
         margin-bottom: 20px;
     }
-
+    footer{
+        justify-content: space-evenly;
+    }
     .view {
         margin-left: 40%;
         margin-right: 40%;
@@ -427,5 +489,8 @@ hr {
         border-radius: 5px;
         margin-bottom: 50px;
     }
+    
 
 }
+
+
